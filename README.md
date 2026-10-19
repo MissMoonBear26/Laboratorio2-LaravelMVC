@@ -24,7 +24,9 @@
 5. [Fase 3: Node.js y servidor](#-fase-3-nodejs-y-servidor)
 6. [Fase 4: Login y registro](#-fase-4-login-y-registro)
 7. [Fase 5: GitHub](#-fase-5-github)
-8. [Conclusión](#-conclusión)
+8. [Errores comunes](#-errores-comunes)
+9. [Conclusión](#-conclusión)
+10. [Referencias](#-referencias)
 
 ---
 
