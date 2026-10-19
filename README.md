@@ -1,22 +1,17 @@
-**UNIVERSIDAD TECNOLÓGICA DE PANAMÁ**
-
-**FACULTAD DE INGENIERÍA DE SISTEMAS COMPUTACIONALES**
-
-**CAMPUS VÍCTOR LEVIS SASSO**
-
-![Laravel](https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg)
-
-# 🔐 Laboratorio #2: Implementación del Login y Register en Laravel 12 y PHP 8.2
-
-**Documentación del laboratorio · Patrón MVC**
-
-| | |
-|:--|:--|
-| **Curso** | Desarrollo Web |
-| **Instructor** | Ing. Irina Fong |
-| **Unidad I** | Modelo Vista Controlador (MVC) |
-| **Semestre** | II Semestre 2026 |
-| **Estudiante** | Nohelis Castro |
+<div align="center">
+<h3>UNIVERSIDAD TECNOLÓGICA DE PANAMÁ</h3>
+<h4>FACULTAD DE INGENIERÍA DE SISTEMAS COMPUTACIONALES<br>CAMPUS VÍCTOR LEVIS SASSO</h4>
+<img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="300" alt="Laravel">
+<h1>🌸 Laboratorio #2: Implementación del Login y Register en Laravel 12 y PHP 8.2</h1>
+<p><strong>Documentación del laboratorio paso a paso</strong></p>
+<table>
+<tr><td><strong>Curso</strong></td><td>Desarrollo Web</td></tr>
+<tr><td><strong>Instructor</strong></td><td>Ing. Irina Fong</td></tr>
+<tr><td><strong>Unidad I</strong></td><td>Modelo Vista Controlador (MVC)</td></tr>
+<tr><td><strong>Semestre</strong></td><td>II Semestre 2026</td></tr>
+<tr><td><strong>Estudiante</strong></td><td>Nohelis Castro</td></tr>
+</table>
+</div>
 
 ---
 
@@ -487,6 +482,41 @@ git push -u origin main
 
 ---
 
+## 🚑 Errores comunes
+
+Problemas frecuentes que pueden aparecer durante el laboratorio y su solución.
+
+| Error | Causa | Solución |
+|:--|:--|:--|
+| `php` no se reconoce como comando | `C:\xampp\php` no está en el `Path` o la terminal se abrió antes del cambio | Agregar la ruta (Paso 5) y abrir una terminal nueva |
+| `php -v` muestra una versión distinta de 8.2 | Otro PHP aparece antes en el `Path` | Mover `C:\xampp\php` hacia arriba en la lista o quitar el otro PHP |
+| `running scripts is disabled` al usar `npm` | PowerShell bloquea la ejecución de scripts | `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` |
+| `SQLSTATE[HY000] [1049] Unknown database` | La base no existe o su nombre no coincide con `DB_DATABASE` | Crearla en phpMyAdmin con el mismo nombre del `.env` |
+| `SQLSTATE[HY000] [2002]` conexión rechazada | MySQL está apagado en XAMPP | Iniciar MySQL desde el panel de control |
+| `Specified key was too long` al migrar | Falta `Schema::defaultStringLength(191)` | Revisar el Paso 12 y ejecutar `php artisan config:clear` |
+| Los cambios del `.env` no se aplican | La configuración quedó en caché | `php artisan config:clear` |
+| El navegador no carga `https://127.0.0.1:8000` | El servidor de desarrollo usa HTTP | Abrir `http://127.0.0.1:8000` |
+| `git push` falla con `src refspec main does not match any` | La rama local aún no se llama `main` | `git branch -M main` y repetir el push |
+
+---
+
 ## 🏁 Conclusión
 
 El laboratorio permitió implementar un sistema de registro e inicio de sesión funcional en Laravel 12. Se configuró el entorno con XAMPP, Composer y Node.js, se conectó el proyecto a MySQL mediante migraciones y se generó la autenticación con `laravel/ui`, comprobando el resultado tanto en el navegador como en la base de datos. Por último, el proyecto se publicó en GitHub aplicando el flujo básico de control de versiones.
+
+---
+
+## 📚 Referencias
+
+- Laravel 12, documentación oficial: https://laravel.com/docs/12.x
+- Laravel 12, instalación: https://laravel.com/docs/12.x/installation
+- Laravel 12, migraciones: https://laravel.com/docs/12.x/migrations
+- Laravel 12, compilación de recursos con Vite: https://laravel.com/docs/12.x/vite
+- Laravel UI (autenticación con Bootstrap): https://github.com/laravel/ui
+- Logos de Laravel: https://github.com/laravel/art
+- XAMPP, Apache Friends: https://www.apachefriends.org/es/index.html
+- Composer, documentación: https://getcomposer.org/doc/
+- Node.js: https://nodejs.org/en
+- Bootstrap: https://getbootstrap.com
+- Git, documentación: https://git-scm.com/doc
+- GitHub Docs: https://docs.github.com
